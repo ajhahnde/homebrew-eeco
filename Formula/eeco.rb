@@ -25,7 +25,7 @@ class Eeco < Formula
   end
 
   def install
-    bin.install Dir["*/eeco"].first => "eeco"
+    bin.install "eeco"
   end
 
   test do
