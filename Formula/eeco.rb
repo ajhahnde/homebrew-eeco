@@ -1,31 +1,32 @@
 class Eeco < Formula
   desc "Self-maintaining workflow ecosystem for a coding project"
   homepage "https://github.com/ajhahnde/eeco"
-  version "2.8.0"
+  version "2.8.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.0/eeco_v2.8.0_darwin_arm64.tar.gz"
-      sha256 "1794073af095a4418e8e9066aae89c739ac82f7a5d198c8681f8b5edd003a76b"
+      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.1/eeco_v2.8.1_darwin_arm64.tar.gz"
+      sha256 "dfa74ae4cdc9a0b2e4d05db328a295f8152a293b525889d7dbff4679e8e27092"
     else
-      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.0/eeco_v2.8.0_darwin_amd64.tar.gz"
-      sha256 "af4878306a10275a86f3be081cd4b6df261b01abe25d645aa394d350a14d97c0"
+      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.1/eeco_v2.8.1_darwin_amd64.tar.gz"
+      sha256 "862b2fc02e20b93e59c43d7fe3472f4812a1f50f0ff3d0769bcb7424ef879b9f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.0/eeco_v2.8.0_linux_arm64.tar.gz"
-      sha256 "860d1e3957663ece68fcd334f3094bdeafd04d1534916a4201304a718936fdf2"
+      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.1/eeco_v2.8.1_linux_arm64.tar.gz"
+      sha256 "24d80896259ff9fa4810097e4accd690a82dd2b3aa1fd1f41777cdc75204a018"
     else
-      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.0/eeco_v2.8.0_linux_amd64.tar.gz"
-      sha256 "e01d7971606d3cfc49ac892c78f1ba50e01009550c20b4d97dd47214ced22fa6"
+      url "https://github.com/ajhahnde/eeco/releases/download/v2.8.1/eeco_v2.8.1_linux_amd64.tar.gz"
+      sha256 "8a38ec09b3a7fee796dc1fd36e03718401a3bb0f2e9f9af34182bcb11b1cb343"
     end
   end
 
   def install
     bin.install "eeco"
+    man1.install "eeco.1"
   end
 
   test do
